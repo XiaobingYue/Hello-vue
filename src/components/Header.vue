@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div style="float: left;line-height: 60px">
+        <div style="float: left">
             <i class="el-icon-s-fold" @click="toggleCollapse" style="margin-right: 15px;text-align: right"></i>
         </div>
-        <div style="text-align: right;line-height: 60px;height: 60px;">
+        <div style="float: right">
             <i class="el-icon-setting" @click="drawer = true" style="margin-right: 15px;text-align: right"></i>
             <el-dropdown>
                 <span style="margin-left: 5px">岳小兵</span>
@@ -47,7 +47,7 @@
     }
 </script>
 
-<style scoped>
+<style>
     .head-wrap {
 
     }

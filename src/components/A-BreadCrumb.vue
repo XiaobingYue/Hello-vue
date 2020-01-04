@@ -1,5 +1,5 @@
 <template>
-    <div style="padding-top: 13px">
+    <div class="bread-crumb">
         <el-breadcrumb separator="/" v-for="item in breadList" :key="item.name">
             <el-breadcrumb-item to="/Home">首页</el-breadcrumb-item>
             <el-breadcrumb-item>{{ item.meta.title }}</el-breadcrumb-item>
@@ -39,5 +39,10 @@
 </script>
 
 <style scoped>
-
+    .bread-crumb {
+        background-color: #fff;
+        height: 30px;
+        padding: 20px 32px 0;
+        border-bottom: 1px solid #e8e8e8;
+    }
 </style>

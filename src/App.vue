@@ -6,7 +6,7 @@
       <el-header class="header">
         <v-header/>
       </el-header>
-        <a-bread-crumb class="bread-crumb"></a-bread-crumb>
+        <a-bread-crumb></a-bread-crumb>
         <el-main>
           <router-view/>
         </el-main>
@@ -31,17 +31,14 @@
 </script>
 
 <style>
+
   .header {
     background-color: #fff;
     /*color: #fff;*/
     margin-bottom: 3px;
+    height: 60px;
+    line-height: 60px;
     box-shadow: 0 1px 4px rgba(0,21,41,.08);
-  }
-  .bread-crumb {
-    background-color: #fff;
-    height: 30px;
-    padding: 20px 32px 0;
-    border-bottom: 1px solid #e8e8e8;
   }
 
   html,body,#app,.el-container{

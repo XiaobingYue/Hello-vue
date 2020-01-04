@@ -62,10 +62,6 @@
                 // eslint-disable-next-line no-console
                 console.log(key, keyPath)
             },
-            // 点击按钮，切换菜单的折叠与展开
-            toggleCollapse() {
-                this.isCollapse = !this.isCollapse
-            }
         }
     }
 </script>
