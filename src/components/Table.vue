@@ -45,6 +45,14 @@
                 </template>
             </el-table-column>
         </el-table>
+        <div style="text-align: center">
+            <el-pagination
+                    background
+                    layout="prev, pager, next"
+                    :total="1000">
+            </el-pagination>
+        </div>
+
     </div>
 </template>
 
