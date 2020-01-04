@@ -1,6 +1,9 @@
 <template>
     <div>
-        <div style="text-align: right">
+        <div style="float: left;line-height: 60px">
+            <i class="el-icon-s-fold" @click="toggleCollapse" style="margin-right: 15px;text-align: right"></i>
+        </div>
+        <div style="text-align: right;line-height: 60px;height: 60px;">
             <i class="el-icon-setting" @click="drawer = true" style="margin-right: 15px;text-align: right"></i>
             <el-dropdown>
                 <span style="margin-left: 5px">岳小兵</span>
@@ -10,34 +13,36 @@
                 </el-dropdown-menu>
             </el-dropdown>
         </div>
-
-
         <el-drawer
                 title="我是标题"
                 :visible.sync="drawer"
                 :with-header="false">
-            <span>我来啦!</span>
+            <div style="font-size: 14px;font-weight: bold;text-align: center;margin-top: 20px">我来啦!</div>
         </el-drawer>
     </div>
 </template>
 
 <script>
+
+    import event from '@/event'
     export default {
-        name:"Header",
+        name: "Header",
         data() {
             return {
                 drawer: false,
                 direction: 'rtl',
+                name: '',
+                breadList: [],
+                isCollapse: false
             };
         },
         methods: {
-            // handleClose(done) {
-            //     this.$confirm('确认关闭？')
-            //         .then(() => {
-            //             done();
-            //         })
-            //         .catch(() => {});
-            // }
+            toggleCollapse() {
+                this.isCollapse = !this.isCollapse
+                this.$nextTick(() => {
+                    event.$emit('toggleCollapse', {isCollapse: this.isCollapse})
+                })
+            }
         }
     }
 </script>

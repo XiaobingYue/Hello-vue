@@ -1,9 +1,5 @@
 <template>
     <div>
-        <el-breadcrumb separator="/" style="margin-bottom: 10px">
-            <el-breadcrumb-item>组件</el-breadcrumb-item>
-            <el-breadcrumb-item>Table表格</el-breadcrumb-item>
-        </el-breadcrumb>
         <el-table
                 :data="tableData"
                 border

@@ -1,9 +1,9 @@
 <template>
-    <el-aside :width="isCollapse ? '65px' : '200px'" style="background-color: #545c64; border-right: solid 1px #e6e6e6">
+    <el-aside :width="isCollapse ? '65px' : '200px'"
+              style="background-color: #545c64; border-right: solid 1px #e6e6e6;box-shadow: 2px 0 6px rgba(0,21,41,.35)">
         <el-row class="tac">
             <el-col :span="24">
                 <div class="vue">Vue</div>
-                <div class="toggle-button" @click="toggleCollapse">|||</div>
                 <el-menu
                         class="el-menu-vertical-demo"
                         router
@@ -15,7 +15,10 @@
                         :default-active="$route.name"
                         :collapse="isCollapse"
                         active-text-color="#ffd04b">
-
+                    <el-menu-item index="Home">
+                        <i class="el-icon-s-home"></i>
+                        <span slot="title">首页</span>
+                    </el-menu-item>
                     <el-submenu v-for="item in menu" :index="item.id" :key="item.id">
                         <template slot="title">
                             <i class="el-icon-menu"></i>
@@ -35,6 +38,7 @@
 <script>
 
     import menu from '@/config/menu-config'
+    import event from '@/event'
 
     export default {
         data() {
@@ -42,6 +46,12 @@
                 menu: menu,
                 isCollapse: false
             }
+        },
+        mounted() {
+            // 接收事件
+            event.$on('toggleCollapse', (params) => {
+                this.isCollapse = params.isCollapse
+            })
         },
         methods: {
             handleOpen(key, keyPath) {
@@ -71,6 +81,7 @@
         cursor: pointer;
         overflow: hidden;
     }
+
     .vue {
         background-color: #545c63;
         color: #fff;
@@ -78,11 +89,12 @@
         text-align: center;
         border-radius: 1px;
     }
+
     .over-hide {
         overflow: hidden;
     }
+
     .el-menu-vertical-demo {
         border: 0;
     }
-    .element::-webkit-scrollbar { width: 0 !important }
 </style>

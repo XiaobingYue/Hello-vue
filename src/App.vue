@@ -6,6 +6,7 @@
       <el-header class="header">
         <v-header/>
       </el-header>
+        <a-bread-crumb class="bread-crumb"></a-bread-crumb>
         <el-main>
           <router-view/>
         </el-main>
@@ -17,11 +18,13 @@
 <script>
   import NavMenu from '@/components/NavMenu'
   import Header from '@/components/Header'
+  import ABreadCrumb from '@/components/A-BreadCrumb'
   export default {
     name: 'app',
     components: {
-      'nav-menu': NavMenu,
-      'v-header': Header
+      'navMenu': NavMenu,
+      'vHeader': Header,
+      'aBreadCrumb':ABreadCrumb
     }
   }
 
@@ -29,10 +32,16 @@
 
 <style>
   .header {
-    /*background-color: #545c63;*/
+    background-color: #fff;
     /*color: #fff;*/
-    line-height: 60px;
+    margin-bottom: 3px;
     box-shadow: 0 1px 4px rgba(0,21,41,.08);
+  }
+  .bread-crumb {
+    background-color: #fff;
+    height: 30px;
+    padding: 20px 32px 0;
+    border-bottom: 1px solid #e8e8e8;
   }
 
   html,body,#app,.el-container{
@@ -42,6 +51,7 @@
     margin: 0;
     /*统一设置高度为100%*/
     height: 100%;
+    background-color: #f0f2f5;
   }
   .container {
 
