@@ -16,6 +16,9 @@ module.exports = [
         },{
             name:'LayOut布局',
             componentName: 'LayOut'
+        },{
+            name:'Tree树',
+            componentName: 'Tree'
         }]
     }];
 
