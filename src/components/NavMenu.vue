@@ -11,6 +11,7 @@
                         @open="handleOpen"
                         @close="handleClose"
                         background-color="#545c64"
+                        :collapse-transition="false"
                         text-color="#fff"
                         :default-active="$route.name"
                         :collapse="isCollapse"
