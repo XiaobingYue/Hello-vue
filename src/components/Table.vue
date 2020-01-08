@@ -52,7 +52,6 @@
                     :total="1000">
             </el-pagination>
         </div>
-
     </div>
 </template>
 

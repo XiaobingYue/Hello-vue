@@ -17,6 +17,9 @@ module.exports = [
             name:'LayOut布局',
             componentName: 'LayOut'
         },{
+            name:'Tree树',
+            componentName: 'Tree'
+        },{
             name:'Progress进度条',
             componentName: 'Progress'
         }]
