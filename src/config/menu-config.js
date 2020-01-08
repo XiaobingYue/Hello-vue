@@ -16,6 +16,9 @@ module.exports = [
         },{
             name:'LayOut布局',
             componentName: 'LayOut'
+        },{
+            name:'Progress进度条',
+            componentName: 'Progress'
         }]
     }];
 

@@ -1,5 +1,6 @@
 <template>
     <div>
+        <div id="tp-weather-widget"></div>
         <div style="float: left">
             <i class="el-icon-s-fold" @click="toggleCollapse" style="margin-right: 15px;text-align: right"></i>
         </div>

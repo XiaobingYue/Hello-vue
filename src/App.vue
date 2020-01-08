@@ -6,8 +6,8 @@
       <el-header class="header">
         <v-header/>
       </el-header>
-        <a-bread-crumb></a-bread-crumb>
         <el-main>
+          <a-bread-crumb/>
           <router-view/>
         </el-main>
       </el-container>
